@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4fb;
+  padding: 48px;
+}
+
+h1 {
+  margin-bottom: 32px;
+  color: #2b2b3c;
+}
+
+.cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-img {
+  height: 140px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6c63ff, #ece9ff);
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.card p {
+  color: #6e6e82;
+  font-weight: 600;
+}
+
+/* posicionamento absoluto relativo ao .card (position: relative no pai) */
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #6c63ff;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.4);
+}
+
+.badge-sale {
+  background: #ff5c5c;
+  box-shadow: 0 4px 10px rgba(255, 92, 92, 0.4);
+}

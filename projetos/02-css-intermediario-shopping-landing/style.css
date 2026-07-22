@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6c63ff;
+  --primary-dark: #564fd8;
+  --text-dark: #2b2b3c;
+  --text-light: #6e6e82;
+  --bg-light: #f4f4fb;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / Nav ---------- */
+.header {
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* pseudo-elemento: sublinhado animado no hover */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.25s ease-in-out;
+}
+
+/* pseudo-classe: hover e active */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-dark);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 64px 24px 96px;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 460px;
+}
+
+.hero-text h1 {
+  font-size: 2.75rem;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero-text p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.btn-get-started {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-get-started:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ---------- Illustration ---------- */
+.hero-illustration {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  flex-shrink: 0;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--bg-light);
+  z-index: 0;
+}
+
+.blob-1 {
+  width: 340px;
+  height: 340px;
+  top: 10px;
+  right: 20px;
+}
+
+.blob-2 {
+  width: 140px;
+  height: 140px;
+  bottom: 0;
+  left: 0;
+  background: #ece9ff;
+}
+
+.phone-mockup {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 200px;
+  height: 340px;
+  background: #fff;
+  border: 6px solid var(--text-dark);
+  border-radius: 32px;
+  box-shadow: 0 20px 40px rgba(43, 43, 60, 0.2);
+  z-index: 2;
+}
+
+/* pseudo-elemento: notch do celular */
+.phone-mockup::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 6px;
+  border-radius: 4px;
+  background: var(--text-dark);
+}
+
+.phone-screen {
+  position: relative;
+  height: 100%;
+  padding: 36px 16px 16px;
+}
+
+.screen-bar {
+  display: block;
+  width: 70%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-light);
+  margin-bottom: 24px;
+}
+
+.app-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.app-icon {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+}
+
+.shopper {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 110px;
+  height: 260px;
+  z-index: 3;
+}
+
+.shopper-head {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f2c6a0;
+}
+
+.shopper-body {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  width: 84px;
+  height: 130px;
+  border-radius: 42px 42px 16px 16px;
+  background: var(--primary);
+}
+
+/* pseudo-elemento: pernas da silhueta */
+.shopper-body::after {
+  content: "";
+  position: absolute;
+  bottom: -84px;
+  left: 14px;
+  width: 56px;
+  height: 84px;
+  border-radius: 0 0 10px 10px;
+  background: var(--text-dark);
+}
+
+.shopper-arm {
+  position: absolute;
+  top: 70px;
+  right: -6px;
+  width: 20px;
+  height: 60px;
+  border-radius: 10px;
+  background: var(--primary);
+  transform: rotate(18deg);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--bg-light);
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 860px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 32px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-illustration {
+    width: 280px;
+    height: 280px;
+  }
+
+  .phone-mockup {
+    width: 150px;
+    height: 260px;
+    right: 30px;
+    top: 20px;
+  }
+
+  .shopper {
+    width: 100px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
