@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const { lerUsuarios, salvarUsuarios } = require("./database");
 
 const app = express();
 const PORTA = 3000;
 
+app.use(cors());
 app.use(express.json());
 
 // GET /usuarios - lista todos, com filtro opcional por nome via query params

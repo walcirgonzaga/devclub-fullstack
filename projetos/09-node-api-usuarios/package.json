@@ -6,11 +6,17 @@
     "start": "node index.js",
     "dev": "node --watch index.js"
   },
-  "keywords": ["node", "express", "api", "crud"],
+  "keywords": [
+    "node",
+    "express",
+    "api",
+    "crud"
+  ],
   "author": "Walcir Gonzaga Jr",
   "license": "ISC",
   "description": "API de cadastro de usuarios com Node.js e Express (CRUD completo)",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1"
   }
 }
