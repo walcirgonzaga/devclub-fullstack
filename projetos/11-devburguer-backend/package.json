@@ -1,0 +1,33 @@
+{
+  "name": "11-devburguer-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "sequelize-cli db:migrate",
+    "seed": "node src/seed.js"
+  },
+  "keywords": ["node", "express", "sequelize", "mongodb", "jwt", "stripe"],
+  "author": "Walcir Gonzaga Jr",
+  "license": "ISC",
+  "description": "API do projeto final DevBurguer (e-commerce de hamburgueres) - Node.js + Express + Sequelize (SQLite) + MongoDB + JWT + Stripe",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.8.0",
+    "multer": "^2.2.0",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1",
+    "stripe": "^22.3.2",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.2.0",
+    "nodemon": "^3.1.14",
+    "sequelize-cli": "^6.6.5"
+  }
+}
