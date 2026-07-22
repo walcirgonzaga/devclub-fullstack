@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevSorteio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <div class="dice">🎲</div>
+    <h1>DevSorteio</h1>
+    <p class="subtitle">Sortear um número</p>
+
+    <div class="inputs">
+      <input type="number" id="min" placeholder="entre">
+      <span>e</span>
+      <input type="number" id="max" placeholder="">
+    </div>
+
+    <button id="btn-sortear">Sortear</button>
+
+    <div class="resultado" id="resultado" hidden>
+      <span>Número sorteado:</span>
+      <strong id="numero-sorteado"></strong>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
