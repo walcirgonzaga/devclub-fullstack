@@ -12,6 +12,11 @@ class OrderController {
     return res.json(orders);
   }
 
+  async indexAll(req, res) {
+    const orders = await Order.find().sort({ createdAt: -1 });
+    return res.json(orders);
+  }
+
   async store(req, res) {
     const { products, total } = req.body;
 

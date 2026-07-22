@@ -35,4 +35,6 @@ routes.post("/products", isAdmin, upload.single("file"), ProductController.store
 routes.put("/products/:id", isAdmin, upload.single("file"), ProductController.update);
 routes.delete("/products/:id", isAdmin, ProductController.delete);
 
+routes.get("/orders/all", isAdmin, OrderController.indexAll);
+
 module.exports = routes;
